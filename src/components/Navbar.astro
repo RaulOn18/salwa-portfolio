@@ -32,28 +32,35 @@
   const nav = document.querySelector("nav");
   const links = document.querySelector("ul");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      nav!.classList.add("scroll");
-    } else {
-      nav!.classList.remove("scroll");
-    }
-  });
+  window.addEventListener('scroll', function () {
+  if (window.scrollY > 150) {
+    nav!.style.position = 'fixed';
+    nav!.style.top = '0';
+    nav!.style.padding = '1rem 1rem';
+  } else {
+    nav!.style.position = '';
+    nav!.style.top = '-100%';
+  }
+});
+
 </script>
 
 <style>
-  .scroll {
+  /* .scroll {
     position: fixed;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     padding: 1rem 1rem;
-  }
+  } */
   nav {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     padding: 1.4rem 1rem;
+    transition: all 0.5s ease-in-out;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
   }
   nav a {
     text-decoration: none;
