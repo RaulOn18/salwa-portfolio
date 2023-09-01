@@ -1,0 +1,95 @@
+---
+
+---
+
+<div class="container">
+  <div>
+    <h1>
+      👋 Hello! <img src="" alt="" /> I'm Salwa,<br />
+       a Product Designer <span>based in Indonesia</span>
+    </h1>
+    <p>
+      I'm very passionate about the work that I do, <span
+        >and if you are curious,</span
+      ><br />
+       you can find my works on <a href="https://behance.net/salwaazizah"
+        >Behance</a
+      >.
+    </p>
+
+    <a class="button" href="/#projects">See My Works</a>
+  </div>
+</div>
+
+<style>
+  .container {
+    height: calc(100vh - 8rem);
+    width: calc(100vw - 12rem);
+    margin: 0 auto;
+    background-color: var(--bg-tertiary);
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  div {
+    width: 70%;
+  }
+
+  h1,
+  p {
+    color: var(--text-primary);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+  p a {
+    color: var(--text-primary);
+  }
+
+  .button {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--button-bg);
+    color: var(--button-text) !important;
+    transition: all 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: var(--bg-primary);
+    color: var(--button-bg) !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      height: calc(100vh - 8rem);
+      width: calc(100vw - 2rem);
+    }
+    div {
+      width: 80%;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    span {
+      display: none;
+    }
+  }
+</style>

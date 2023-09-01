@@ -1,0 +1,83 @@
+---
+import CardService from "./CardService.astro";
+---
+
+<section>
+  <div class="grid-1">
+    <h1>The service i offer is specifically designed to meet your needs.</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ea.
+      Architecto dicta officiis perspiciatis dolorem eaque magnam voluptatem
+      expedita vero.
+    </p>
+    <a class="button" href="">More Details</a>
+  </div>
+  <div class="grid-2">
+    <CardService
+      icon="🕸️"
+      title="Web Design"
+      content="Lorem ipsum dolor sit amet."
+    />
+    <CardService
+      icon="🕸️"
+      title="Web Design"
+      content="Lorem ipsum dolor sit amet."
+    />
+    <CardService
+      icon="🕸️"
+      title="Web Design"
+      content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur fuga."
+    />
+    <CardService
+      icon="🕸️"
+      title="Web Design"
+      content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur fuga."
+    />
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    width: calc(100vw - 12rem);
+    margin: 4rem auto 4rem auto;
+    grid-template-columns: 1fr 1fr;
+    color: var(--text-primary);
+  }
+
+  .grid-1 h1 {
+    max-width: 80%;
+
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .grid-1 p {
+    font-size: 0.9rem;
+    max-width: 82%;
+  }
+
+  .grid-1 .button {
+    margin-top: 1.2rem;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 12px;
+    display: inline-block;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    background-color: var(--button-bg);
+    color: var(--button-text) !important;
+    border: 1px solid var(--button-bg);
+    transition: all 0.3s ease;
+  }
+  .grid-1 .button:hover {
+    background-color: var(--bg-primary);
+    color: var(--button-bg) !important;
+  }
+
+  .grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>
