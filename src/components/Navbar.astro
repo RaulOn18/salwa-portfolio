@@ -1,0 +1,136 @@
+---
+
+---
+
+<nav>
+  <a href="/">Designer and Developer</a>
+  <ul>
+    <li>
+      <a href="/">Home <img src="/down-arrow.svg" alt="down arrow" /></a>
+    </li>
+    <li>
+      <a href="#about">About <img src="/down-arrow.svg" alt="down arrow" /></a>
+    </li>
+    <li>
+      <a href="#services"
+        >Services <img src="/down-arrow.svg" alt="down arrow" /></a
+      >
+    </li>
+    <li>
+      <a href="#projects"
+        >Projects <img src="/down-arrow.svg" alt="down arrow" /></a
+      >
+    </li>
+    <li>
+      <a href="/blog">Blog <img src="/down-arrow.svg" alt="down arrow" /></a>
+    </li>
+  </ul>
+  <a class="link-wa" href="https://wa.me/62881022165768">Contact Me</a>
+</nav>
+
+<script>
+  const nav = document.querySelector("nav");
+  const links = document.querySelector("ul");
+
+  window.addEventListener('scroll', function () {
+  if (window.scrollY > 150) {
+    nav!.style.position = 'fixed';
+    nav!.style.top = '0';
+    nav!.style.padding = '1rem 1rem';
+  } else {
+    nav!.style.position = '';
+    nav!.style.top = '-100%';
+  }
+});
+
+</script>
+
+<style>
+  /* .scroll {
+    position: fixed;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    padding: 1rem 1rem;
+  } */
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.4rem 1rem;
+    transition: all 0.5s ease-in-out;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+  ul {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+  }
+  li a {
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+  li a img {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+    fill: var(--text-primary);
+    stroke: var(--text-primary);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    fill-opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: 50% 50%;
+    transform: rotate(0deg);
+  }
+  li a:hover img {
+    transform: rotate(180deg);
+  }
+  li a::after {
+    display: flex;
+    content: "";
+    border-bottom: solid 3px var(--text-primary);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .link-wa {
+    padding: 0.8rem 1.2rem;
+    font-size: 12px;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    background-color: var(--button-bg);
+    color: var(--button-text) !important;
+    border: 1px solid var(--button-bg);
+    transition: all 0.3s ease;
+  }
+  .link-wa:hover {
+    background-color: var(--bg-primary);
+    color: var(--button-bg) !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      justify-content: space-between;
+    }
+    ul {
+      display: none;
+    }
+  }
+</style>
